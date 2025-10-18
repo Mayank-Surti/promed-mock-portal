@@ -26,7 +26,7 @@ export default function Navbar({ isAuthenticated, setAuth }) {
       <div className="space-x-4 pr-4 font-bold text-lg">
         {!isAuthenticated ? (
           <>
-            <Link to="/">Login</Link>
+            <Link to="/login">Login</Link>
             <Link to="/signup">Register</Link>
           </>
         ) : (

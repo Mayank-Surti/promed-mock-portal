@@ -19,11 +19,11 @@ const App = () => {
       <Router>
         <Navbar isAuthenticated={isAuthenticated} setAuth={setIsAuthenticated} />
         <Routes>
-          <Route path="/" element={<Login setAuth={setIsAuthenticated} />} />
+          <Route path="/login" element={<Login setAuth={setIsAuthenticated} />} />
           <Route path="/signup" element={<Signup setAuth={setIsAuthenticated} />} />
           <Route
             path="/portal"
-            element={isAuthenticated ? <Portal /> : <Navigate to="/" />}
+            element={isAuthenticated ? <Portal /> : <Navigate to="/login" />}
           />
         </Routes>
       </Router>
